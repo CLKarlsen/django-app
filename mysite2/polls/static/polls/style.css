@@ -1,11 +1,197 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+
 body {
-	background-color: #00f;
+	background-image: url('images/bg_1.png');
+	font-size: 95%; /* base font size is 14px */ /*87.5%*/
+	font-family: 'Roboto', sans-serif;
+	line-height: 2;
+	color: #fff;
+	margin: 0 auto;
+
 }
 
+/*-------------------------------------------------*/
+/* Body style */
+/*-------------------------------------------------*/
+.body {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*-------------------------------------------------*/
+/* Header */
+/*-------------------------------------------------*/
+.mainHeader {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 56px; /* base font size is 14px */ /*87.5%*/
+	margin-top: 0;
+	margin-bottom: -7%;
+	color: #fff;
+}
+
+/*-------------------------------------------------*/
+/* Fadein effekt på header og innhold */
+/*-------------------------------------------------*/
+.fadein {
+	animation: fadein 4s;
+	-moz-animation: fadein 4s; /* Firefox */
+	-webkit-animation: fadein 4s; /* Safari and Chrome */
+	-o-animation: fadein 4s; /* Opera */
+}
+
+@keyframes fadein {
+	from {
+    	opacity:0;
+	}
+	to {
+    	opacity:1;
+	}
+}
+
+@-moz-keyframes fadein { /* Firefox */
+	from {
+    	opacity:0;
+	}
+	to {
+    	opacity:1;
+	}
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+	from {
+    	opacity:0;
+	}
+	to {
+    	opacity:1;
+	}
+}
+
+@-o-keyframes fadein { /* Opera */
+	from {
+    	opacity:0;
+	}
+	to {
+    	opacity: 1;
+	}
+}
+
+/*-------------------------------------------------*/
+/* Hr style 1 */
+/* Midterste rgba var svart rgba(0,0,0, 75)*/
+/*-------------------------------------------------*/
+	
+.style1 {
+	border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255, 0.9), rgba(0,0,0,0)); 
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255, 0.9), rgba(0,0,0,0)); 
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255, 0.9), rgba(0,0,0,0)); 
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255, 0.9), rgba(0,0,0,0)); 
+    width: 80%;
+}
+
+a {
+	text-decoration: none;
+}
+	
+a:link, a:visited {
+	color: #fff;
+}
+
+/*-------------------------------------------------*/
+/* LISTA */
+/*-------------------------------------------------*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
 li {
-	margin-top: 10%;
+  font-size: 20px;
 }
+ 
+li:last-child {
+  border: none;
+}
+ 
 li a {
-	color: green;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  width: 200px;
+ 
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
 }
+ 
+li a:hover {
+  font-size: 30px;
+  background: #303030;
+}
+
+/*-------------------------------------------------*/
+/* VOTE SKJEMA */
+/*-------------------------------------------------*/
+
+form {
+	font-size: 20px;
+	margin-bottom: 3%;
+	margin-top: 3%;
+}
+
+
+/*-------------------------------------------------*/
+/* Content */
+/*-------------------------------------------------*/
+	
+.content {
+	background-color: #444;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2% 5%;
+}
+
+.shadow
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.shadow:before, .shadow:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.shadow:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+    -moz-transform:skew(8deg) rotate(3deg);     
+    -ms-transform:skew(8deg) rotate(3deg);     
+    -o-transform:skew(8deg) rotate(3deg); 
+    transform:skew(8deg) rotate(3deg);
+} 
 

@@ -1,4 +1,18 @@
-<h1>{{ question.question_text }}</h1>
+<!DOCTYPE html>
+<head>
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type"text/css" href="{% static 'polls/style.css' %}" />
+</head>
+
+<body class="body">
+
+	<header class="mainHeader fadein">
+		<h2>{{ question.question_text }}</h2>
+	</header>
+
+<div class="content shadow">
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 <form action="{% url 'polls:vote' question.id %}" method="post">
@@ -8,4 +22,9 @@
     <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
 {% endfor %}
 <input type="submit" value="Vote" />
+
 </form>
+</div>
+
+</body>
+</html>
